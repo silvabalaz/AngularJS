@@ -100,10 +100,10 @@ function initialize() {
     for (var i = 0, place; place = places[i]; i++) {
       var image = {
         url: place.icon,
-        size: new google.maps.Size(71, 71),
+        size: new google.maps.Size(30, 30),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17,34),
-        scaledSize: new google.maps.Size(25, 25)
+        scaledSize: new google.maps.Size(10, 10)
       };
 
       // Create a marker for each place.
@@ -143,9 +143,40 @@ google.maps.event.addDomListener(window, 'load', initialize);
   <body>
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <div id="map-canvas"></div>
+    <div class="container-fluid">
+  <div class="row-fluid navbar navbar-inverse">
+    <div class="navbar-inner" ng-controller="ZipCodeFrmCtrl">
+      <div class="container-fluid search-zipcode ">
+        <form class="form-inline pull-left" name="zipCodeFrm" novalidate>
+          <!-- <div class="control-group"> -->
+            
+          <!-- </div> -->
+        </form>
+   
 
+                <div class="modal-header">
+                    <h3>Pretrazi mjesto</h3>
+     
 
-
+  <div class="row-fluid">
+    <div class="span3 container well">
+      <label class="m-bottom">
+      Filter By : 
+      <input type="text" ng-model="searchPlace" class="input-medium search-query">
+      </label>
+      <div class="bs-docs-sidebar places-container">
+        <ul class="nav nav-list bs-docs-sidenav affix-top">
+          <li ng-repeat="place in places | filter:searchPlace" ng-class="activeClass(place)">
+            <a ng-href="{{getUrl( place.url )}}">
+              <i class="icon-chevron-right"></i>
+              {{place.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+ 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
