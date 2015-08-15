@@ -27,19 +27,20 @@ angular
   var A = angular.module('MyModuleA');
   var B = angular.module('MyModuleB');
   var C = angular.module('MyModuleC');
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/a.html',
-        controller: ''
+        controller: 'SearchCtrl'
       })
       .when('/b', {
         templateUrl: 'views/b.html',
-        controller: ''
+        controller: 'Detalji'
       })
       .when('/c', {
         templateUrl: 'views/c.html',
-        controller: ''
+        controller: 'OdabraneLokacije'
       })
       .otherwise({
         redirectTo: '/'
