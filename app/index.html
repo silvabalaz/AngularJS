@@ -91,39 +91,6 @@ function initialize() {
          
           
 
-          var A = angular.module("MyModuleA", []);
-
-          A.controller("DropdownFilter", function($scope) {
-            
-
-        $scope.place = [
-        
-          {
-            text: 'restoran',
-            value: '1'
-          },
-          {
-            text: 'kafic',
-            value: '2'
-          
-          },
-          
-          {
-            text: 'kino',
-            value: '3'
-          }
-        
-        ];
-        $scope.selected = {}; 
-          });
-        
-          A.controller("TextFilter", function($scope){});
-          A.controller("WishList", function($scope){});
-
-          var B = angular.module("MyModuleB", []);
-          var C = angular.module("MyModuleC", []);
-
-          angular.module("TriModula", ["MyModuleA", "MyModuleB", "MyModuleC"]);
 
     /*
       function initialize() 

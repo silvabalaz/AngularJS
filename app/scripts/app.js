@@ -18,18 +18,7 @@ angular
     'ngTouch'
     'google-maps'
     //'LocalStorageModule'
-  ])
- /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
-    localStorageServiceProvider.setPrefix('ls');
-  }]) */
-
-  angular.module("silvaApp", ["MyModuleA", "MyModuleB", "MyModuleC"]);
-
-  var A = angular.module('MyModuleA');
-  var B = angular.module('MyModuleB');
-  var C = angular.module('MyModuleC');
-
-  .config(function ($routeProvider) {
+  ]).config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/a.html',
@@ -47,3 +36,17 @@ angular
         redirectTo: '/'
       });
   });
+
+
+  
+ /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('ls');
+  }]) */
+
+  angular.module("silvaApp", ["MyModuleA", "MyModuleB", "MyModuleC"]);
+
+  var A = angular.module('MyModuleA');
+  var B = angular.module('MyModuleB');
+  var C = angular.module('MyModuleC');
+
+  
