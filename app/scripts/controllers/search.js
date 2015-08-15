@@ -4,7 +4,7 @@
 
 
 
-.controller("SearchCtrl", function ($scope, $routeParams, $http) {
+angular.module('silvaApp').controller("SearchCtrl", function ($scope, $routeParams, $http) {
         
         $scope.place = $routeParams.place;
         
@@ -13,7 +13,7 @@
             
             $scope.places = results.data;
 
-         console.log("Mjesta: " +$scope.places);
+     
 
 
         });

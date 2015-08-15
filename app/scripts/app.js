@@ -18,19 +18,23 @@ angular
     'ngTouch'
     //'LocalStorageModule'
   ])
- .config(['localStorageServiceProvider', function(localStorageServiceProvider){
+ /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
     localStorageServiceProvider.setPrefix('ls');
-  }]) 
+  }]) */
 
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/a.html',
+        controller: 'MyControllerA'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/b', {
+        templateUrl: 'views/b.html',
+        controller: 'MyControllerB'
+      })
+      .when('/c', {
+        templateUrl: 'views/c.html',
+        controller: 'MyControllerC'
       })
       .otherwise({
         redirectTo: '/'
