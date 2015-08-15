@@ -91,7 +91,7 @@ h3 img {
 #map { 
     width: 600px;
     height: 400px;
-    top:200px;
+    top:100px;
     left:650px;
     position: relative;
     border-radius: 5px;

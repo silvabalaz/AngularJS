@@ -4,9 +4,9 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles/search.css">
-       <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <title>Places - AngularJS - app</title>
-      <script src=" https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=API_KEY" ></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
     
  
@@ -121,18 +121,13 @@ function initialize() {
 <body> 
 <input id="SearchPlace" class="controls" type="text" placeholder="Search Box">
 <input id="SearchPlace" class="controls" type="text" placeholder="WishList">
-<button type="button" class="btn btn-primary btn-lg" >Dodaj na listu</button>
+<button type="button" class="btn btn-primary btn-md" >Dodaj na listu</button>
  
 <input id="SearchPlace" class="controls" type="text" ng-controller="TextFilter" placeholder="TextFilter">
 <select id="SearchPlace"class="controls" type="text" ng-controller="DropdownFilter" placeholder="DropdownList" ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
  
 
 <div id="map"></div>
-
-
-Text Filter : 
-
-<input type="text" ng-model="searchPlace" class="input-medium search-query">
 
 
       <!--
@@ -143,27 +138,7 @@ Text Filter :
             </a>
           </li>
       --> 
-    
-    <div>
-            <h4>Dropdown Filter</h4>
-            <div ng-controller="DropdownFilter">
-            <select ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
-            </div>
-        </div>
-
-        <div>
-            <h4>Text Filter</h4>
-            <div ng-controller="TextFilter">
-            <select ng-model="text" ng-options=""></select>
-            </div>
-        </div>
-
-        <div>
-        Wishlist:
-        <button class="" ng-click=""></button>
-
-
-        </div>
+ 
 
 
 
