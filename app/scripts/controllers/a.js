@@ -54,6 +54,7 @@ A.config(function(ngGPlacesAPIProvider){
 });
 
 A.controller('ngGPlaces',function($scope,ngGPlacesAPI){
+	
   $scope.details = ngGPlacesAPI.placeDetails({reference:"really_long_reference_id"}).then(
     function (data) {
       return data;

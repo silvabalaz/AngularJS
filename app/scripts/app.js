@@ -13,9 +13,10 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
+    'ngRoute',            
     'ngSanitize',
     'ngTouch'
+    'google-maps'
     //'LocalStorageModule'
   ])
  /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
