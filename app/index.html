@@ -114,9 +114,18 @@ function initialize() {
 
 </head>
 <body> 
-
 <input id="SearchPlace" class="controls" type="text" placeholder="Search Box">
-
+<input id="SearchPlace" class="controls" type="text" placeholder="WishList">
+ <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button class="btn btn-success" 
+                ng-disabled="resForm.$invalid">Dodaj na listu</button>
+            </div>
+  </div>
+<input id="SearchPlace" class="controls" type="text" ng-controller="TextFilter" placeholder="TextFilter">
+<select id="SearchPlace" class="controls" type="text"ng-controller="DropdownFilter" placeholder="DropdownList" ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
+ 
+<button class="" ng-click=""></button>
 <div id="map"></div>
 
 
@@ -134,7 +143,26 @@ Text Filter :
           </li>
       --> 
     
- <h1> Angular Google Maps </h1> 
+    <div>
+            <h4>Dropdown Filter</h4>
+            <div ng-controller="DropdownFilter">
+            <select ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
+            </div>
+        </div>
+
+        <div>
+            <h4>Text Filter</h4>
+            <div ng-controller="TextFilter">
+            <select ng-model="text" ng-options=""></select>
+            </div>
+        </div>
+
+        <div>
+        Wishlist:
+        <button class="" ng-click=""></button>
+
+
+        </div>
 
 
 
