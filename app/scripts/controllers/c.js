@@ -3,4 +3,4 @@
 
 var C = angular.module('MyModuleC');
 
-C.controller();
+A.controller("OdabraneLokacije", function($scope){});
