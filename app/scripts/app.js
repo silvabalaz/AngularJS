@@ -20,9 +20,13 @@ angular
     //'LocalStorageModule'
   ]).config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/a', {
         templateUrl: 'views/a.html',
         controller: 'SearchCtrl'
+      })
+     .when('/', {
+        templateUrl: 'index.html',
+        controller: 'MainCtrl'
       })
       .when('/b', {
         templateUrl: 'views/b.html',
@@ -38,7 +42,7 @@ angular
   });
 
 
-  
+
  /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
     localStorageServiceProvider.setPrefix('ls');
   }]) */

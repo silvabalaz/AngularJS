@@ -9,9 +9,15 @@
  */
 angular.module('silvaApp')
   .controller('MainCtrl', function ($scope, localStorageService ) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.map = {
+
+	center:{latitude: 45, longitude: -73 },
+	zoom:8
+
+    }
+    $scope.marker = {
+
+    					coords:{latitude: 45, longitude: -73}
+
+                    }
   });
