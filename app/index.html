@@ -9,6 +9,11 @@
       <script src=" https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=API_KEY" ></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
     
+ 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
 
 
 <script>
@@ -116,16 +121,12 @@ function initialize() {
 <body> 
 <input id="SearchPlace" class="controls" type="text" placeholder="Search Box">
 <input id="SearchPlace" class="controls" type="text" placeholder="WishList">
- <div class="form-group">
-            <div class="col-xs-offset-2 col-xs-10">
-                <button class="btn btn-success" 
-                ng-disabled="resForm.$invalid">Dodaj na listu</button>
-            </div>
-  </div>
-<input id="SearchPlace" class="controls" type="text" ng-controller="TextFilter" placeholder="TextFilter">
-<select id="SearchPlace" class="controls" type="text"ng-controller="DropdownFilter" placeholder="DropdownList" ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
+<button type="button" class="btn btn-primary btn-lg" >Dodaj na listu</button>
  
-<button class="" ng-click=""></button>
+<input id="SearchPlace" class="controls" type="text" ng-controller="TextFilter" placeholder="TextFilter">
+<select id="SearchPlace"class="controls" type="text" ng-controller="DropdownFilter" placeholder="DropdownList" ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
+ 
+
 <div id="map"></div>
 
 
