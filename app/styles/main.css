@@ -10,6 +10,8 @@
 
 body {
   padding: 0;
+  background-image: url("place.jpg");
+  background-size:cover;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -111,3 +113,4 @@ h3 img {
     display: table;
     content: " ";
 }
+
