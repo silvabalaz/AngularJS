@@ -10,4 +10,11 @@
 angular.module('silvaApp')
   .controller('MainCtrl', function ($scope, localStorageService ) {
    
+
+  	 $http.get('/data/places.json').success(function(result){
+
+              $scope.places = result;
+
+
   });
+      
