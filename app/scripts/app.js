@@ -22,19 +22,24 @@ angular
     localStorageServiceProvider.setPrefix('ls');
   }]) */
 
+  angular.module("silvaApp", ["MyModuleA", "MyModuleB", "MyModuleC"]);
+
+  var A = angular.module('MyModuleA');
+  var B = angular.module('MyModuleB');
+  var C = angular.module('MyModuleC');
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/a.html',
-        controller: 'MyControllerA'
+        controller: ''
       })
       .when('/b', {
         templateUrl: 'views/b.html',
-        controller: 'MyControllerB'
+        controller: ''
       })
       .when('/c', {
         templateUrl: 'views/c.html',
-        controller: 'MyControllerC'
+        controller: ''
       })
       .otherwise({
         redirectTo: '/'
