@@ -18,3 +18,18 @@ angular.module('silvaApp')
 
   });
       
+
+      /*
+
+		Binding to data
+
+We're going to pull down a 
+JSON file then bind our view to it, so that we can 
+play around with the generated app structure. OK, 
+so in our main controller we want to use the 
+$http service to pull down this JSON and bind to it.
+Now we set the result of the HTTP 
+call on scope so that our view can access it.
+
+
+      */

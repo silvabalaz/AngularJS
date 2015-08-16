@@ -16,23 +16,15 @@ angular
     'ngRoute',            
     'ngSanitize',
     'ngTouch'
-    'google-maps'
+
     //'LocalStorageModule'
   ]).config(function ($routeProvider) {
     $routeProvider
-      .when('/a', {
-        templateUrl: 'views/a.html',
-        controller: 'SearchCtrl'
-      })
      .when('/', {
         templateUrl: 'index.html',
         controller: 'MainCtrl'
       })
-      .when('/b', {
-        templateUrl: 'views/b.html',
-        controller: 'Detalji'
-      })
-      .when('/c', {
+     .when('/c', {
         templateUrl: 'views/c.html',
         controller: 'OdabraneLokacije'
       })
@@ -41,6 +33,7 @@ angular
       });
   });
 
+    
 
 
  /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
