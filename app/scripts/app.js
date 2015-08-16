@@ -46,8 +46,6 @@ var app = angular
 
   angular.module("silvaApp", ["MyModuleA", "MyModuleB", "MyModuleC"]);
 
-  var A = angular.module('MyModuleA');
-  var B = angular.module('MyModuleB');
-  var C = angular.module('MyModuleC');
+
 
   
