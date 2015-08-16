@@ -1,6 +1,6 @@
 'use strict';
 
-A.controller("DropdownFilter", function($scope) {
+app.controller("DropdownFilter", function($scope) {
             
 
         $scope.place = [

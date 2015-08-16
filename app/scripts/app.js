@@ -8,7 +8,11 @@
  *
  * Main module of the application.
  */
-angular
+
+/* global app:true */
+/* exported app */
+
+var app = angular
   .module('silvaApp', [
     'ngAnimate',
     'ngCookies',
@@ -16,25 +20,26 @@ angular
     'ngRoute',            
     'ngSanitize',
     'ngTouch'
-
-    //'LocalStorageModule'
-  ]).config(function ($routeProvider) {
+    'LocalStorageModule'
+  ]).config(['localStorageServiceProvider', '$routeProvider', function(localStorageServiceProvider, $routeProvider){
+    localStorageServiceProvider.setPrefix('ls');
     $routeProvider
-     .when('/', {
-        templateUrl: 'index.html',
+      .when('/', {
+        templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-     .otherwise({
+      .when('/', {
+        templateUrl: 'views/a.html',
+        controller: 'DropdownFilter'
+      })
+      .otherwise({
         redirectTo: '/'
       });
-  });
-
+  }]);
     
 
 
- /*.config(['localStorageServiceProvider', function(localStorageServiceProvider){
-    localStorageServiceProvider.setPrefix('ls');
-  }]) */
+
 
   angular.module("silvaApp", ["MyModuleA", "MyModuleB", "MyModuleC"]);
 

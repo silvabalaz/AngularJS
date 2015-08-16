@@ -16,20 +16,29 @@ angular.module('silvaApp')
               $scope.places = result;
 
 
+
+    var todosInStore = localStorageService.get('todos');
+
+    $scope.todos = todosInStore || [];
+
+    $scope.$watch('todos', function () {
+      localStorageService.add('todos', $scope.todos);
+    }, true);
+
+    // Uncomment if you are disabling persistence
+    //$scope.todos = [];
+
+    $scope.addTodo = function () {
+      $scope.todos.push($scope.todo);
+      $scope.todo = '';
+    };
+
+    $scope.removeTodo = function (index) {
+      $scope.todos.splice(index, 1);
+    };
+
+
   });
       
 
-      /*
-
-		Binding to data
-
-We're going to pull down a 
-JSON file then bind our view to it, so that we can 
-play around with the generated app structure. OK, 
-so in our main controller we want to use the 
-$http service to pull down this JSON and bind to it.
-Now we set the result of the HTTP 
-call on scope so that our view can access it.
-
-
-      */
+ 
