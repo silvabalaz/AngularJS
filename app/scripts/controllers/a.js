@@ -1,6 +1,8 @@
 'use strict';
 
-app.controller("DropdownFilter", function($scope) {
+
+var A = angular.module('MyModuleA');
+A.controller("DropdownFilter", function($scope) {
             
 
         $scope.place = [

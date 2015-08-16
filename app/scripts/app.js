@@ -20,6 +20,9 @@ var app = angular
     'ngRoute',            
     'ngSanitize',
     'ngTouch'
+    'MyModuleA', 
+    'MyModuleB', 
+    'MyModuleC'
     'LocalStorageModule'
   ]).config(['localStorageServiceProvider', '$routeProvider', function(localStorageServiceProvider, $routeProvider){
     localStorageServiceProvider.setPrefix('ls');
