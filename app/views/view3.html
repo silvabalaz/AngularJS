@@ -1,8 +1,18 @@
 <html>
   <head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <title></title>
     <meta content="">
     <style></style>
-  </head>
-  <body></body>
+
+       </head>
+  <body>
+  	<select id="SearchPlace"class="controls" type="text" 
+ng-controller="DropdownFilter" placeholder="DropdownList" 
+ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
+
+
+  </body>
 </html>
