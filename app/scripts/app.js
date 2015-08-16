@@ -24,11 +24,7 @@ angular
         templateUrl: 'index.html',
         controller: 'MainCtrl'
       })
-     .when('/c', {
-        templateUrl: 'views/c.html',
-        controller: 'OdabraneLokacije'
-      })
-      .otherwise({
+     .otherwise({
         redirectTo: '/'
       });
   });
