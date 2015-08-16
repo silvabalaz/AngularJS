@@ -92,7 +92,16 @@ function initialize() {
   google.maps.event.addDomListener(window, 'load', initialize);
 
 
+   angular.module('silvaApp')
+  .controller('MainCtrl', function ($scope, localStorageService ) {
    
+
+     $http.get('/data/places.json').success(function(result){
+
+              $scope.places = result;
+
+
+}
          
           
 
@@ -115,6 +124,8 @@ function initialize() {
     
 
 
+
+
 </script>
 
 </head>
@@ -125,7 +136,7 @@ function initialize() {
 <input id="SearchPlace" class="controls" type="text" placeholder="WishList">
 <button type="button" class="btn btn-primary btn-md" >Dodaj</button>
  
-<input id="SearchPlace" class="controls" type="text" ng-controller="TextFilter" placeholder="TextFilter">
+<input id="SearchPlace" class="controls" type="text" ng-controller="MainCtrl" placeholder="TextFilter">
 <select id="SearchPlace"class="controls" type="text" ng-controller="DropdownFilter" placeholder="DropdownList" ng-model="dropdown" ng-options="pl.text for pl in place"> {{place.text}} </select>
 
 
