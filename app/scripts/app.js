@@ -32,8 +32,28 @@ var app = angular
         controller: 'MainCtrl'
       })
       .when('/', {
-        templateUrl: 'views/a.html',
+        templateUrl: 'views/view1.html',
+        controller: 'SearchCtrl'
+      })
+      .when('/', {
+        templateUrl: 'views/view2.html',
+        controller: 'TextFilter'
+      })
+      .when('/', {
+        templateUrl: 'views/view3.html',
         controller: 'DropdownFilter'
+      })
+      .when('/', {
+        templateUrl: 'views/view4.html',
+        controller: 'SearchCtrl'
+      })
+      .when('/', {
+        templateUrl: 'views/view5.html',
+        controller: 'SearchCtrl'
+      })
+      .when('/', {
+        templateUrl: 'views/view6.html',
+        controller: 'SearchCtrl'
       })
       .otherwise({
         redirectTo: '/'
