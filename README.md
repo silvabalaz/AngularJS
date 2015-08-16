@@ -1,3 +1,3 @@
 # AngularJS
 
-![alt text](screenshots/PrtSc.png "U izradi")
+![alt text](app/screenshots/PrtSc.png "U izradi")
