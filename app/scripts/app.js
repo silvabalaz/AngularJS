@@ -45,15 +45,15 @@ var app = angular
       })
       .when('/', {
         templateUrl: 'views/view4.html',
-        controller: 'SearchCtrl'
+        controller: 'DodajWish'
       })
       .when('/', {
         templateUrl: 'views/view5.html',
-        controller: 'SearchCtrl'
+        controller: 'DodajWish'
       })
       .when('/', {
         templateUrl: 'views/view6.html',
-        controller: 'SearchCtrl'
+        controller: 'UkloniWish'
       })
       .otherwise({
         redirectTo: '/'
