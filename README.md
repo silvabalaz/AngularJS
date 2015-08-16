@@ -1,3 +1,3 @@
 # AngularJS
 
-![alt text](screenshots/filename.png "Description goes here")
+![alt text](screenshots/PrtSc.png "U izradi")
